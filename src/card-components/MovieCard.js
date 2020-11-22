@@ -30,20 +30,20 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
+    console.log(this.props)
     return (
       <div className="movie-card">
        <div> 
         
         </div>
-        <CardFront />
+        <CardFront poster={posterMap[this.props.poster]} />
         <div>
         <CardBack 
-        
+        title={this.props.title}
+        IMBRating={this.props.IMDBRating}
+        genres={this.props.genres.join(', ')}
         />
-        {this.props.title}
-        {this.props.IMDBRating}
-        {this.props.genres}
-        {this.props.posters}
+        
         </div>
       </div>
     )
@@ -53,6 +53,6 @@ export default class MovieCard extends Component {
 MovieCard.defaultProps = {
   poster: "default",
   title: "Unknown",
-  IMDBRating: "null",
-  
+  IMDBRating: null,
+  genres: ['No Genre(s) Found']
 }
