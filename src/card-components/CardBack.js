@@ -36,9 +36,3 @@ export default class CardBack extends Component {
     )
   }
 }
-
-CardBack.defaultProps = {
-title: 'Unknown',
-IMDBRating: 'null',
-genres: 'No Genre(s) Found'
-}
